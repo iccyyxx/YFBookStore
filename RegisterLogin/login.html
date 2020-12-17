@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" ; charset="UTF-8" />
+    <link rel="stylesheet" href="../main.css" />
+    <title>牙方书城</title>
+</head>
+
+<body>
+    <!-- 页面最顶端部分 -->
+    <div class="topBar">
+        <div class="comWidth">
+            <div class="rightArea">
+                欢迎来到牙方书城!&nbsp;&nbsp;&nbsp;
+                <!-- 页面跳转 -->
+                <a href="../main.php">[ 主页 ]</a>
+                <a href="login.html">[ 登录 ]</a>
+                <a href="register.html">[ 注册 ]</a>
+                <a href="../shopCar.html">[ 购物车 ]</a>
+            </div>
+        </div>
+    </div>
+    <!-- 页面的搜索界面 -->
+    <div class="logoBar">
+        <div class="comWidth">
+            <div class="logo fl">
+                <img src="../image\bookCity1.png" alt="牙方书城" />
+            </div>
+        </div>
+    </div>
+    <div class="hr_25"></div>
+    <!--  登录界面-->
+    <div class="wrap">
+        <div class="title">
+            账号密码登录
+        </div>
+        <!-- 登录表单，用post方法提交至login.php -->
+        <form action="login.php" method="post" id="form">
+            <!-- 登录名 -->
+            <input type="text" class="input" name="username" placeholder="用户名登录" />
+            <!-- 密码 -->
+            <input type="password" class="input" placeholder="密码" name="userpsw" />
+            <!-- 验证码 -->
+            <input type="text" class="input" name="yanzhengma" placeholder="验证码" />
+            <!-- 调用yanzhengma.php生成验证码
+                点击验证码即可刷新 -->
+            <img class="yanzhengma" src="yanzhengma.php?r= <?php echo rand();?>" id="refresh" title="刷新验证码"
+                align="absmiddle"
+                onclick="document.getElementById('refresh').src='yanzhengma.php?r= <?php echo rand();?>' ">
+            <!-- 登录 -->
+            <input type="submit" name="login" value="登录" id="btn">
+    </div>
+</body>
+
+</html>

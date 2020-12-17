@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" ; charset="UTF-8" />
+    <link rel="stylesheet" href="../main.css" />
+    <title>牙方书城</title>
+</head>
+
+<body>
+    <!-- 页面最顶端部分 -->
+    <div class="topBar">
+        <div class="comWidth">
+            <div class="rightArea">
+                欢迎来到牙方书城!&nbsp;&nbsp;&nbsp;
+                <!-- 页面跳转 -->
+                <a href="../main.php">[ 主页 ]</a>
+                <a href="login.html">[ 登录 ]</a>
+                <a href="register.html">[ 注册 ]</a>
+                <a href="../shopCar.html">[ 购物车 ]</a>
+            </div>
+        </div>
+    </div>
+    <!-- 页面的搜索界面 -->
+    <div class="logoBar">
+        <div class="comWidth">
+            <div class="logo fl">
+                <img src="../image\bookCity1.png" alt="牙方书城" />
+            </div>
+        </div>
+    </div>
+    <div class="hr_25"></div>
+    <!-- 注册页面 -->
+    <div class="wrap">
+        <div class="title">
+            注册账号
+        </div>
+        <!-- 注册表单，用post方法提交至register.php -->
+        <form action="register.php" method="post" id="form">
+            <input type="text" class="input" name="username" placeholder="用户名" />
+            <input type="password" class="input" name="userpsw" placeholder="密码" />
+            <input type="email" class="input" name="useremail" placeholder="邮箱" />
+            <input type="text" class="input" name="usertele" placeholder="联系方式" />
+            <input type="text" class="input" name="truename" placeholder="真实姓名" />
+            <input type="text" class="input" name="yanzhengma" placeholder="验证码" />
+            <img class="yanzhengma" src="yanzhengma.php?r= <?php echo rand();?>" id="refresh" title="刷新验证码"
+                align="absmiddle"
+                onclick="document.getElementById('refresh').src='yanzhengma.php?r= <?php echo rand();?>' ">
+            <input type="submit" name="register" value="注册" id="btn">
+            <input type="reset" value="重置" name="reset" id="btn">
+    </div>
+</body>
+
+</html>

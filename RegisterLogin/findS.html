@@ -1,0 +1,46 @@
+<!-- 找回密码界面 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" ; charset="UTF-8" />
+    <link rel="stylesheet" href="../main.css" />
+    <title>牙方书城</title>
+</head>
+
+<body>
+    <!-- 页面最顶端部分 -->
+    <div class="topBar">
+        <div class="comWidth">
+            <div class="rightArea">
+                欢迎来到牙方书城!&nbsp;&nbsp;&nbsp;
+                <!-- 页面跳转 -->
+                <a href="../main.php">[ 主页 ]</a>
+                <a href="login.html">[ 登录 ]</a>
+                <a href="register.html">[ 注册 ]</a>
+                <a href="../shopCar.html">[ 购物车 ]</a>
+            </div>
+        </div>
+    </div>
+    <!-- 页面的搜索界面 -->
+    <div class="logoBar">
+        <div class="comWidth">
+            <div class="logo fl">
+                <img src="../image\bookCity1.png" alt="牙方书城" />
+            </div>
+        </div>
+    </div>
+    <div class="hr_25"></div>
+        <div class="wrap">
+			<div class="title">
+				找回密码
+			</div>
+			<form action="findS.php" method="post" id="form"> 
+				<input type="text" class="input" name="username" placeholder="输入用户名"/>
+                <input type="email"class="input" placeholder="请输入绑定的邮箱"name="email"/>
+                <input type="text" class="input"name="yanzhengma"placeholder="验证码" />
+                <img  class="yanzhengma"src="yanzhengma.php?r= <?php echo rand();?>" id = "refresh" title="刷新验证码" align="absmiddle" onclick="document.getElementById('refresh').src='yanzhengma.php?r= <?php echo rand();?>' ">
+                <input type="submit" name="find" value="找回密码" id="btn">
+		</div>
+    </body>
+</html>
